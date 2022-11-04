@@ -1,9 +1,13 @@
 @mixin buttons ($color, $secondColor) {
     background: $color;
+    color: $secondColor;
     border: none;
     padding: 0;
-    font-size: 1.8em;
+    font-size: 1.3em;
     overflow: hidden;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
     cursor: pointer;
     &:hover {
       background-color: $secondColor;

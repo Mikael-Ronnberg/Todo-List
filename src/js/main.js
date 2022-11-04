@@ -23,7 +23,6 @@ function addOneToDo(click){
         todoArray.push(myToDo);
         inputText.value ="";
         createObjectOnDom(todoArray);
-
     }
 }
 
@@ -51,10 +50,11 @@ function createObjectOnDom(visibleList) {
     toDoDeleteBtn.innerHTML = '<i class="bi bi-trash3"><i/>';
     toDoDeleteBtn.classList.add("throwBtn")
     
-        if(visibleList[i].doneDone === true) {
-            toDoContainerDOM.classList.add("doneDone");
-        }
-        toDoListHTML.appendChild(toDoContainerDOM);
+    if(visibleList[i].doneDone === true) {
+        toDoContainerDOM.classList.add("doneDone");
+    }
+    
+    toDoListHTML.appendChild(toDoContainerDOM);
 
     toDoContainerDOM.appendChild(toDoDeleteBtn);
     saveToLocalStorage(visibleList);
@@ -68,11 +68,7 @@ function deleteOneToDo(click) {
         const trash = event.parentElement;
         const index = trash.querySelector("li").innerText;
         todoArray.splice(index, 1);
-
         localStorage.clear();
-
-        // console.log(localStorage);
-
         saveToLocalStorage(todoArray);
         createObjectOnDom(todoArray);
     }
@@ -84,9 +80,6 @@ function deleteOneToDo(click) {
         done.classList.toggle("doneDone");
         todoArray[number].doneDone = !todoArray[number].doneDone;
         localStorage.clear();
-
-        // console.log(todoArray);
-
         saveToLocalStorage(todoArray);
         createObjectOnDom(todoArray);
     }
