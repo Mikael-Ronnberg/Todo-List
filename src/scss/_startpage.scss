@@ -1,0 +1,114 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+//Kruxade så mycket med problemlösning att stylingen uteblev. Får återkomma och snygga upp denna röra    t(0. 0 t) 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+}
+
+.main-container{
+    min-height: 100vh;
+    background-color: var.$primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    width: 90vw;
+    height: 30vh;
+    margin: 0.5em;
+    background-color: var.$quadrary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px black solid;
+    box-shadow: 10px 10px;
+    border-radius: 5px;
+    h2 {
+        color: white;
+        margin: 1em;
+        font-size: 2.7em;
+    }
+    #add-todo {
+        @include mix.buttons(var.$quadrary, white);
+        font-size: 3em;
+        margin-bottom: 0;
+    }
+    #input-text {
+        border-radius: 5px;
+        border: solid 2px black;
+        background: white;
+        font-size: 1em;
+        padding: 0.3em;
+        margin: 0.5em;
+        width: 23em;
+    }
+    select {
+        margin: 1em;
+        margin-left: 5em;
+        padding: 0.4em;
+        border-radius: 5px;
+        border: solid 2px black;
+    }
+}
+
+.todo-wrapper {
+    width: 90vw;
+    min-height: 60vh;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$tertiary;
+    border: 3px black solid;
+    box-shadow: 10px 10px;
+    border-radius: 5px;
+}
+.todo{
+    align-self: flex-start;
+    list-style: none;
+    width: 50vw;
+    margin: 0em;
+    &--container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em;
+        background: white;
+        border: 3px black solid;
+        box-shadow: 2px 2px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        &__dot {
+            flex: 1;
+            margin-left: 1em;
+        }
+    }
+}
+
+.doneBtn {
+   @include mix.buttons(var.$secondary, white);
+    .bi-check-square {
+        pointer-events: none;
+    }
+}
+
+.throwBtn {
+    @include mix.buttons(var.$quadrary, white);
+    cursor: pointer;
+    .bi-trash3{
+        pointer-events: none;
+    }
+}
+
+.doneDone {
+    opacity: 0.5;
+}

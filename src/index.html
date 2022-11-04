@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome To Do List :)</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/scss/main.scss">
+    <script defer src="/src/js/main.js" type="module"></script>
+
+</head>
+<body>
+    <main class="main-container">
+        <div class="input-container">
+            <h2>My Not So Awesome To Do List</h2>
+            <form>
+                <input type="text" id="input-text" placeholder="What do you want to do?">
+                <button id="add-todo" type="submit"><i class="bi bi-caret-down-square"></i></button>
+                    <select name="mytodos" class="toggle--todo">
+                        <option value="all">All</option>
+                        <option value="done">Done</option>
+                        <option value="undone">Undone</option>
+                    </select>
+            </form>
+        </div>
+        <div class="todo-wrapper">
+            <ul class="todo"></ul>
+        </div>
+    </main>
+    
+</body>
+</html>
