@@ -1,0 +1,27 @@
+@use "./../variables" as var;
+
+.head-container {
+    width: 90vw;
+    height: 30vh;
+    margin: 0.5em;
+    background-color: var.$quadrary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include var.borders;
+
+    h2{
+        color: white;
+        margin: 0.7em;
+        font-size: 3em;
+    }
+
+    select {
+        padding: 0.4em;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: solid 2px black;
+    }
+}

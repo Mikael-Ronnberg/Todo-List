@@ -1,0 +1,38 @@
+@use "./../variables/" as var;
+
+.todo-wrapper {
+    width: 90vw;
+    min-height: 60vh;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$tertiary;
+    @include var.borders;
+}
+.todo{
+    align-self: flex-start;
+    list-style: none;
+    width: 50vw;
+    &--container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.8em;
+        background: white;
+        border: 3px black solid;
+        box-shadow: 2px 2px;
+        border-radius: 5px;
+        font-size: 1.5em;
+        font-weight: bold;
+        &__dot {
+            width: 10em;
+            flex: 1;
+            margin-left: 1em;
+        }
+    }
+}
+
+.doneDone {
+    opacity: 0.5;
+}

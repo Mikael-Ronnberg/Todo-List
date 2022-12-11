@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", downloadLocalStorage);
 let todoArray = [];
 
 function addOneToDo(click){
-
     click.preventDefault();
 
     if (inputText.value === "") {
@@ -41,13 +40,13 @@ function createObjectOnDom(visibleList) {
     toDoListDOM.classList.add("todo--container__dot");
     toDoContainerDOM.appendChild(toDoListDOM);
     
-    const toDoDoneBtn = document.createElement("button");
-    toDoDoneBtn.innerHTML = `<i class="bi bi-check-square"><i/>`;
+    let toDoDoneBtn = document.createElement("button");
+    toDoDoneBtn.innerHTML = `Done`;
     toDoDoneBtn.classList.add("doneBtn");
     toDoContainerDOM.appendChild(toDoDoneBtn);
     
     const toDoDeleteBtn = document.createElement("button");
-    toDoDeleteBtn.innerHTML = '<i class="bi bi-trash3"><i/>';
+    toDoDeleteBtn.innerHTML = 'X';
     toDoDeleteBtn.classList.add("throwBtn")
     
     if(visibleList[i].doneDone === true) {
