@@ -17,14 +17,25 @@
     margin: 0.7em;
     font-size: 1.3rem;
     @include var.tablet {
-      font-size: 2em;
+      font-size: 2rem;
+    }
+    @include var.desktop {
+      font-size: 3rem;
     }
   }
 
   select {
     padding: 0.4em;
-    font-size: 1.2em;
+    margin-left: 10rem;
+    font-size: 0.4rem;
     border-radius: 5px;
     border: solid 2px black;
+    @include var.tablet {
+      font-size: 1rem;
+      margin-left: 0;
+    }
+    @include var.desktop {
+      font-size: 1.2rem;
+    }
   }
 }

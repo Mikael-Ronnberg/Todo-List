@@ -1,15 +1,20 @@
 @use "./../variables" as var;
- 
+
 #add-todo {
-    @include var.buttons(var.$quadrary, white);
-    font-size: 1.5em;
+  @include var.buttons(var.$quadrary, white);
+  font-size: 0.6rem;
+  @include var.tablet {
+    font-size: 1.1rem;
+  }
+  @include var.desktop {
+    font-size: 1.5rem;
+  }
 }
 
 .doneBtn {
-    @include var.buttons(white, var.$secondary);
- }
- 
-.throwBtn {
-    @include var.buttons(white, var.$quadrary);
+  @include var.buttons(white, var.$secondary);
 }
 
+.throwBtn {
+  @include var.buttons(white, var.$quadrary);
+}

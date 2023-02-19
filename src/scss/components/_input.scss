@@ -1,11 +1,14 @@
 @use "./../variables/" as var;
 
 #input-text {
-    border-radius: 5px;
-    border: solid 3px black;
-    background: white;
-    font-size: 1.5em;
-    padding: 0.3em;
-    margin: 0.5em;
-    width: 25em;
+  border-radius: 5px;
+  border: solid 3px black;
+  background: white;
+  font-size: 0.6rem;
+  padding: 0.3em;
+  margin: 0.5em;
+  width: 25em;
+  @include var.tablet {
+    font-size: 1.1rem;
+  }
 }
